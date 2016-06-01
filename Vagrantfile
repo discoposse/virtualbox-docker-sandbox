@@ -5,7 +5,7 @@ VAGRANTFILE_API_VERSION = "2"
 ENV['VAGRANT_DEFAULT_PROVIDER'] = 'virtualbox'
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.network :forwarded_port, guest: 22, host: 2242
+  config.vm.network :forwarded_port, guest: 22, host: 2250
   config.vm.define "dockersandbox" do |dockersandbox|
     dockersandbox.vm.hostname = "dockersandbox"
     dockersandbox.vm.box = "trusty-server"
